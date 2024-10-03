@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.encora.taskmanagementapplication.controller.AuthControllerTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2024-10-03T10:01:46" hostname="Shehnazs-MacBook-Air.local" time="0.395">
+  <properties/>
+  <testcase name="refreshToken_invalidRefreshToken_returnsForbidden()" classname="com.encora.taskmanagementapplication.controller.AuthControllerTest" time="0.322"/>
+  <testcase name="signup_invalidEmail_returnsBadRequest()" classname="com.encora.taskmanagementapplication.controller.AuthControllerTest" time="0.003"/>
+  <testcase name="signup_invalidPassword_returnsBadRequest()" classname="com.encora.taskmanagementapplication.controller.AuthControllerTest" time="0.003"/>
+  <testcase name="generateToken_rateLimitExceeded_returnsTooManyRequests()" classname="com.encora.taskmanagementapplication.controller.AuthControllerTest" time="0.005"/>
+  <testcase name="refreshToken_validRefreshToken_returnsNewToken()" classname="com.encora.taskmanagementapplication.controller.AuthControllerTest" time="0.004"/>
+  <testcase name="generateToken_invalidCredentials_returnsUnauthorized()" classname="com.encora.taskmanagementapplication.controller.AuthControllerTest" time="0.003"/>
+  <testcase name="refreshToken_expiredRefreshToken_returnsForbidden()" classname="com.encora.taskmanagementapplication.controller.AuthControllerTest" time="0.005"/>
+  <testcase name="logout_always_returnsOkAndClearsCookie()" classname="com.encora.taskmanagementapplication.controller.AuthControllerTest" time="0.034"/>
+  <testcase name="generateToken_validCredentials_returnsToken()" classname="com.encora.taskmanagementapplication.controller.AuthControllerTest" time="0.005"/>
+  <testcase name="signup_validRequest_returnsCreated()" classname="com.encora.taskmanagementapplication.controller.AuthControllerTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

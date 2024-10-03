@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TaskController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">TaskManagementApplication</a> &gt; <a href="index.source.html" class="el_package">com.encora.taskmanagementapplication.controller</a> &gt; <span class="el_source">TaskController.java</span></div><h1>TaskController.java</h1><pre class="source lang-java linenums">package com.encora.taskmanagementapplication.controller;
+
+
+import com.encora.taskmanagementapplication.entity.Task;
+import com.encora.taskmanagementapplication.dto.TaskCountInfo;
+import com.encora.taskmanagementapplication.dto.TasksDueStatusList;
+import com.encora.taskmanagementapplication.service.TaskService;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping(&quot;/api/tasks&quot;)
+public class TaskController {
+
+    private final TaskService taskService;
+
+<span class="fc" id="L18">    public TaskController(TaskService taskService) {</span>
+<span class="fc" id="L19">        this.taskService = taskService;</span>
+<span class="fc" id="L20">    }</span>
+
+    @GetMapping
+    public List&lt;Task&gt; getTasksForUser(@RequestParam String userId, @RequestParam int page, @RequestParam int size) {
+<span class="fc" id="L24">        return taskService.getAllTasksForUser(userId, page, size).getContent();</span>
+    }
+
+    @PostMapping
+    public Task createTask(@RequestBody Task task, String userId) throws Exception {
+<span class="nc" id="L29">        return taskService.createUpdateTask(task, userId);</span>
+    }
+
+    @PatchMapping
+    public Task updateTask(@RequestBody Task task, String userId) throws Exception {
+<span class="fc" id="L34">        return taskService.createUpdateTask(task, userId);</span>
+    }
+
+    @DeleteMapping(&quot;/{taskId}&quot;)
+    public void deleteTask(@PathVariable Long taskId) throws Exception {
+<span class="nc" id="L39">        taskService.deleteTask(taskId);</span>
+<span class="nc" id="L40">    }</span>
+
+    @GetMapping(&quot;/count&quot;)
+    public TaskCountInfo getTotalTasks(String userId) {
+<span class="fc" id="L44">        return taskService.getTasksCount(userId);</span>
+    }
+
+    @GetMapping(&quot;/dueStatus&quot;)
+    public TasksDueStatusList getTaskDueStatus(String userId) {
+<span class="nc" id="L49">        return taskService.getTaskDueStatus(userId);</span>
+    }
+
+    @GetMapping(&quot;/task/{taskId}&quot;)
+    public Task getTask(@RequestParam String userId, @PathVariable Long taskId) {
+<span class="fc" id="L54">        return taskService.getTask(userId, taskId);</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

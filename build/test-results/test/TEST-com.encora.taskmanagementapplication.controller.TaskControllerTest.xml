@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.encora.taskmanagementapplication.controller.TaskControllerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-10-03T10:01:46" hostname="Shehnazs-MacBook-Air.local" time="0.046">
+  <properties/>
+  <testcase name="getTaskById_validId_returnsTask()" classname="com.encora.taskmanagementapplication.controller.TaskControllerTest" time="0.032"/>
+  <testcase name="getTotalTasks_shouldReturnTaskCountInfo()" classname="com.encora.taskmanagementapplication.controller.TaskControllerTest" time="0.001"/>
+  <testcase name="getAllTasks_returnsAllTasks()" classname="com.encora.taskmanagementapplication.controller.TaskControllerTest" time="0.007"/>
+  <testcase name="createTask_validTask_returnsCreatedTask()" classname="com.encora.taskmanagementapplication.controller.TaskControllerTest" time="0.002"/>
+  <testcase name="updateTask_validTask_returnsUpdatedTask()" classname="com.encora.taskmanagementapplication.controller.TaskControllerTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

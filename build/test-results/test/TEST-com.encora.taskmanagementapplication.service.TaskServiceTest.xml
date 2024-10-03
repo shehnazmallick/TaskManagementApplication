@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.encora.taskmanagementapplication.service.TaskServiceTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2024-10-03T10:01:46" hostname="Shehnazs-MacBook-Air.local" time="0.056">
+  <properties/>
+  <testcase name="deleteTask_existingTask_shouldDeleteTask()" classname="com.encora.taskmanagementapplication.service.TaskServiceTest" time="0.038"/>
+  <testcase name="getTasksCount_shouldReturnTaskCountInfo()" classname="com.encora.taskmanagementapplication.service.TaskServiceTest" time="0.003"/>
+  <testcase name="getAllTasksForUser_shouldReturnPageOfTasks()" classname="com.encora.taskmanagementapplication.service.TaskServiceTest" time="0.003"/>
+  <testcase name="createUpdateTask_taskNotUpdated_shouldThrowException()" classname="com.encora.taskmanagementapplication.service.TaskServiceTest" time="0.002"/>
+  <testcase name="createUpdateTask_updateExistingTask_shouldReturnUpdatedTask()" classname="com.encora.taskmanagementapplication.service.TaskServiceTest" time="0.001"/>
+  <testcase name="getTaskDueStatus_shouldReturnTasksDueStatusList()" classname="com.encora.taskmanagementapplication.service.TaskServiceTest" time="0.001"/>
+  <testcase name="getTask_shouldReturnTask()" classname="com.encora.taskmanagementapplication.service.TaskServiceTest" time="0.001"/>
+  <testcase name="deleteTask_nonExistingTask_shouldThrowException()" classname="com.encora.taskmanagementapplication.service.TaskServiceTest" time="0.001"/>
+  <testcase name="createUpdateTask_userNotFound_shouldThrowException()" classname="com.encora.taskmanagementapplication.service.TaskServiceTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

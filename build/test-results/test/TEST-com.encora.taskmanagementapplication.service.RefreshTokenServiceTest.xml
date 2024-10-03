@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.encora.taskmanagementapplication.service.RefreshTokenServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-10-03T10:01:46" hostname="Shehnazs-MacBook-Air.local" time="0.101">
+  <properties/>
+  <testcase name="verifyExpiration_expiredToken_throwsAuthException()" classname="com.encora.taskmanagementapplication.service.RefreshTokenServiceTest" time="0.097"/>
+  <testcase name="verifyExpiration_validToken_returnsToken()" classname="com.encora.taskmanagementapplication.service.RefreshTokenServiceTest" time="0.001"/>
+  <testcase name="findByToken_existingToken_returnsToken()" classname="com.encora.taskmanagementapplication.service.RefreshTokenServiceTest" time="0.001"/>
+  <testcase name="findByToken_nonExistingToken_returnsEmptyOptional()" classname="com.encora.taskmanagementapplication.service.RefreshTokenServiceTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

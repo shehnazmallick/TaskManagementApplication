@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Task.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">TaskManagementApplication</a> &gt; <a href="index.source.html" class="el_package">com.encora.taskmanagementapplication.entity</a> &gt; <span class="el_source">Task.java</span></div><h1>Task.java</h1><pre class="source lang-java linenums">package com.encora.taskmanagementapplication.entity;
+
+
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.time.LocalDate;
+
+@Table(name = &quot;task&quot;)
+@Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class Task {
+
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    private Long id;
+
+    @Column(name = &quot;title&quot;, nullable = false, unique = true)
+    private String title;
+
+    @Column(name = &quot;description&quot;, nullable = false)
+    private String description;
+
+    @Column(name = &quot;due_date&quot;, nullable = false)
+    private LocalDate dueDate;
+
+    @Column(name = &quot;status&quot;, nullable = false)
+    private String status;
+
+    @Column(name = &quot;create_date&quot;, nullable = false)
+    private LocalDate createDate;
+
+    @ManyToOne
+    @JoinColumn(name = &quot;user_profile_id&quot;)
+    private User assignedTo;
+
+    @PrePersist
+    public void insert() {
+<span class="nc" id="L43">        createDate = LocalDate.now();</span>
+<span class="nc" id="L44">        status = &quot;Pending&quot;;</span>
+<span class="nc" id="L45">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
